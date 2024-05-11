@@ -1,5 +1,7 @@
+import { SignUp } from "@clerk/nextjs";
+
 const SignUpPage = () => {
-  return <div>SignUpPage</div>;
+  return <SignUp path="/sign-up" />;
 };
 
 export default SignUpPage;
