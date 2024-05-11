@@ -13,10 +13,12 @@
     "@clerk/nextjs": "^5.0.8",
     "@hono/clerk-auth": "^2.0.0",
     "@hono/zod-validator": "^0.2.1",
+    "@neondatabase/serverless": "^0.9.3",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "drizzle-orm": "^0.30.10",
     "hono": "^4.3.4",
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
@@ -28,13 +30,14 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "0.20.17",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "typescript": "^5"
   }
 }
