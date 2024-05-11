@@ -1,6 +1,6 @@
 import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
+import { eq } from "drizzle-orm";
 import { Hono } from "hono";
-import { HTTPException } from "hono/http-exception";
 
 import { db } from "@/db/drizzle";
 import { accounts } from "@/db/schema";
@@ -9,9 +9,7 @@ const app = new Hono().get("/", clerkMiddleware(), async (ctx) => {
   const auth = getAuth(ctx);
 
   if (!auth?.userId) {
-    throw new HTTPException(401, {
-      res: ctx.json({ error: "Unauthorized." }, 401),
-    });
+    return ctx.json({ error: "Unauthorized." }, 401);
   }
 
   const data = await db
@@ -19,7 +17,8 @@ const app = new Hono().get("/", clerkMiddleware(), async (ctx) => {
       id: accounts.id,
       name: accounts.name,
     })
-    .from(accounts);
+    .from(accounts)
+    .where(eq(accounts.userId, auth.userId));
 
   return ctx.json({ data });
 });
