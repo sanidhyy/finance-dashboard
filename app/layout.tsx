@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
+import { Toaster } from "@/components/ui/sonner";
 import { QueryProviders } from "@/providers/query-provider";
 import { SheetProvider } from "@/providers/sheet-provider";
 
@@ -22,6 +23,7 @@ const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
         <body className={inter.className}>
           <QueryProviders>
             <SheetProvider />
+            <Toaster richColors theme="light" />
 
             {children}
           </QueryProviders>
