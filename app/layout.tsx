@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { QueryProviders } from "@/providers/query-provider";
+import { SheetProvider } from "@/providers/sheet-provider";
 
 import "./globals.css";
 
@@ -19,7 +20,11 @@ const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <QueryProviders>{children}</QueryProviders>
+          <QueryProviders>
+            <SheetProvider />
+
+            {children}
+          </QueryProviders>
         </body>
       </html>
     </ClerkProvider>
