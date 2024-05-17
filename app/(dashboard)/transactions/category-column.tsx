@@ -1,6 +1,7 @@
 import { TriangleAlert } from "lucide-react";
 
 import { useOpenCategory } from "@/features/categories/hooks/use-open-category";
+import { useOpenTransaction } from "@/features/transactions/hooks/use-open-transaction";
 import { cn } from "@/lib/utils";
 
 type CategoryColumnProps = {
@@ -15,14 +16,15 @@ export const CategoryColumn = ({
   categoryId,
 }: CategoryColumnProps) => {
   const { onOpen: onOpenCategory } = useOpenCategory();
+  const { onOpen: onOpenTransaction } = useOpenTransaction();
 
   const onClick = () => {
     if (categoryId) onOpenCategory(categoryId);
+    else onOpenTransaction(id);
   };
 
   return (
     <button
-      disabled={!category}
       onClick={onClick}
       className={cn(
         "flex items-center cursor-pointer hover:underline",
