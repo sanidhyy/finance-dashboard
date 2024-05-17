@@ -15,6 +15,13 @@
       "when": 1715927410594,
       "tag": "0001_greedy_obadiah_stane",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1715948039507,
+      "tag": "0002_careless_captain_marvel",
+      "breakpoints": true
     }
   ]
 }
