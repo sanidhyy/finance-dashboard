@@ -3,6 +3,9 @@ import { Trash } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { AmountInput } from "@/components/amount-input";
+import { DatePicker } from "@/components/date-picker";
+import { Select } from "@/components/select";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -13,8 +16,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Select } from "@/components/select";
+import { Textarea } from "@/components/ui/textarea";
 import { insertTransactionSchema } from "@/db/schema";
+import { convertAmountToMilliunits } from "@/lib/utils";
 
 const formSchema = z.object({
   date: z.coerce.date(),
@@ -61,8 +65,13 @@ export const TransactionForm = ({
   });
 
   const handleSubmit = (values: FormValues) => {
-    console.log(values);
-    // onSubmit(values);
+    const amount = parseFloat(values.amount);
+    const amountInMilliunits = convertAmountToMilliunits(amount);
+
+    onSubmit({
+      ...values,
+      amount: amountInMilliunits,
+    });
   };
 
   const handleDelete = () => {
@@ -76,6 +85,25 @@ export const TransactionForm = ({
         autoComplete="off"
         className="space-y-4 pt-4"
       >
+        <FormField
+          name="date"
+          control={form.control}
+          disabled={disabled}
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <DatePicker
+                  value={field.value}
+                  onChange={field.onChange}
+                  disabled={disabled}
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <FormField
           name="accountId"
           control={form.control}
@@ -92,7 +120,7 @@ export const TransactionForm = ({
                   value={field.value}
                   onChange={field.onChange}
                   disabled={disabled}
-                ></Select>
+                />
               </FormControl>
 
               <FormMessage />
@@ -116,7 +144,71 @@ export const TransactionForm = ({
                   value={field.value}
                   onChange={field.onChange}
                   disabled={disabled}
-                ></Select>
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          name="payee"
+          control={form.control}
+          disabled={disabled}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Payee</FormLabel>
+
+              <FormControl>
+                <Input
+                  disabled={disabled}
+                  placeholder="Add a payee"
+                  {...field}
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          name="amount"
+          control={form.control}
+          disabled={disabled}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Amount</FormLabel>
+
+              <FormControl>
+                <AmountInput
+                  {...field}
+                  disabled={disabled}
+                  placeholder="0.00"
+                />
+              </FormControl>
+
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          name="notes"
+          control={form.control}
+          disabled={disabled}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Notes</FormLabel>
+
+              <FormControl>
+                <Textarea
+                  {...field}
+                  value={field.value || ""}
+                  disabled={disabled}
+                  placeholder="Optional notes..."
+                />
               </FormControl>
 
               <FormMessage />
@@ -125,7 +217,7 @@ export const TransactionForm = ({
         />
 
         <Button className="w-full" disabled={disabled}>
-          {id ? "Save changes" : "Create account"}
+          {id ? "Save changes" : "Create transaction"}
         </Button>
 
         {!!id && (
@@ -137,7 +229,7 @@ export const TransactionForm = ({
             variant="outline"
           >
             <Trash className="size-4 mr-2" />
-            Delete account
+            Delete transaction
           </Button>
         )}
       </form>
