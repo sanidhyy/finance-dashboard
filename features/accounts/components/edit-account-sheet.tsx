@@ -9,7 +9,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { insertAccountSchema } from "@/db/schema";
-import { useCreateAccount } from "@/features/accounts/api/use-create-account";
+import { useEditAccount } from "@/features/accounts/api/use-edit-account";
 import { useGetAccount } from "@/features/accounts/api/use-get-account";
 import { useOpenAccount } from "@/features/accounts/hooks/use-open-account";
 
@@ -25,12 +25,14 @@ export const EditAccountSheet = () => {
   const { isOpen, onClose, id } = useOpenAccount();
 
   const accountQuery = useGetAccount(id);
-  const mutation = useCreateAccount();
+  const editMutation = useEditAccount(id);
+
+  const isPending = editMutation.isPending;
 
   const isLoading = accountQuery.isLoading;
 
   const onSubmit = (values: FormValues) => {
-    mutation.mutate(values, {
+    editMutation.mutate(values, {
       onSuccess: () => {
         onClose();
       },
@@ -46,7 +48,7 @@ export const EditAccountSheet = () => {
       };
 
   return (
-    <Sheet open={isOpen || mutation.isPending} onOpenChange={onClose}>
+    <Sheet open={isOpen || isPending} onOpenChange={onClose}>
       <SheetContent className="space-y-4">
         <SheetHeader>
           <SheetTitle>Edit Account</SheetTitle>
@@ -63,7 +65,7 @@ export const EditAccountSheet = () => {
             id={id}
             defaultValues={defaultValues}
             onSubmit={onSubmit}
-            disabled={mutation.isPending}
+            disabled={isPending}
           />
         )}
       </SheetContent>

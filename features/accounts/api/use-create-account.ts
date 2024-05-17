@@ -13,6 +13,7 @@ export const useCreateAccount = () => {
   const mutation = useMutation<ResponseType, Error, RequestType>({
     mutationFn: async (json) => {
       const response = await client.api.accounts.$post({ json });
+
       return await response.json();
     },
     onSuccess: () => {
