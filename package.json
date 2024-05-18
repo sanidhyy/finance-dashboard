@@ -66,6 +66,7 @@
     "drizzle-kit": "0.20.17",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "eslint-plugin-unused-imports": "^3.2.0",
     "pg": "^8.11.5",
     "postcss": "^8",
     "prettier": "^3.2.5",
