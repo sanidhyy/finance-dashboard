@@ -10,7 +10,7 @@ import {
 
 import { CustomTooltip } from "./custom-tooltip";
 
-type AreaVaraintProps = {
+type AreaVariantProps = {
   data: {
     date: string;
     income: number;
@@ -18,7 +18,7 @@ type AreaVaraintProps = {
   }[];
 };
 
-export const AreaVariant = ({ data }: AreaVaraintProps) => {
+export const AreaVariant = ({ data }: AreaVariantProps) => {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <AreaChart data={data}>
