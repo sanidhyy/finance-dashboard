@@ -22,15 +22,15 @@ const AccountsPage = () => {
 
   if (accountsQuery.isLoading) {
     return (
-      <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-6">
+      <div className="mx-auto -mt-6 w-full max-w-screen-2xl pb-10">
         <Card className="border-none drop-shadow-sm">
           <CardHeader>
             <Skeleton className="h-8 w-48" />
           </CardHeader>
 
           <CardContent>
-            <div className="h-[500px] w-full flex items-center justify-center">
-              <Loader2 className="size-6 text-slate-300 animate-spin" />
+            <div className="flex h-[500px] w-full items-center justify-center">
+              <Loader2 className="size-6 animate-spin text-slate-300" />
             </div>
           </CardContent>
         </Card>
@@ -39,13 +39,13 @@ const AccountsPage = () => {
   }
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-6">
+    <div className="mx-auto -mt-6 w-full max-w-screen-2xl pb-10">
       <Card className="border-none drop-shadow-sm">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
-          <CardTitle className="text-xl line-clamp-1">Accounts Page</CardTitle>
+          <CardTitle className="line-clamp-1 text-xl">Accounts Page</CardTitle>
 
           <Button size="sm" onClick={newAccount.onOpen}>
-            <Plus className="size-4 mr-2" /> Add new
+            <Plus className="mr-2 size-4" /> Add new
           </Button>
         </CardHeader>
 

@@ -23,7 +23,7 @@ export const ImportTable = ({
   selectedColumns,
 }: ImportTableProps) => {
   return (
-    <div className="rounded-md border overflow-hidden">
+    <div className="overflow-hidden rounded-md border">
       <Table>
         <TableHeader className="bg-muted">
           <TableRow>

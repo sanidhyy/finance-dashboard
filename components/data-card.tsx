@@ -65,7 +65,7 @@ export const DataCard = ({
     <Card className="border-none drop-shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between gap-x-4">
         <div className="space-y-2">
-          <CardTitle className="text-2xl line-clamp-1">{title}</CardTitle>
+          <CardTitle className="line-clamp-1 text-2xl">{title}</CardTitle>
 
           <CardDescription className="line-clamp-1">
             {dateRange}
@@ -78,7 +78,7 @@ export const DataCard = ({
       </CardHeader>
 
       <CardContent>
-        <h1 className="font-bold text-2xl mb-2 line-clamp-1 break-all">
+        <h1 className="mb-2 line-clamp-1 break-all text-2xl font-bold">
           <CountUp
             preserveValue
             start={0}
@@ -91,7 +91,7 @@ export const DataCard = ({
 
         <p
           className={cn(
-            "text-muted-foreground text-sm line-clamp-1",
+            "line-clamp-1 text-sm text-muted-foreground",
             percentageChange > 0 && "text-emerald-500",
             percentageChange < 0 && "text-rose-500"
           )}
@@ -106,7 +106,7 @@ export const DataCard = ({
 
 export const DataCardLoading = () => {
   return (
-    <Card className="border-none drop-shadow-sm h-[192px]">
+    <Card className="h-[192px] border-none drop-shadow-sm">
       <CardHeader className="flex flex-row items-center justify-between">
         <div className="space-y-2">
           <Skeleton className="h-6 w-24" />
@@ -117,8 +117,8 @@ export const DataCardLoading = () => {
       </CardHeader>
 
       <CardContent>
-        <Skeleton className="shrink-0 h-10 w-24 mb-2" />
-        <Skeleton className="shrink-0 h-4 w-40" />
+        <Skeleton className="mb-2 h-10 w-24 shrink-0" />
+        <Skeleton className="h-4 w-40 shrink-0" />
       </CardContent>
     </Card>
   );

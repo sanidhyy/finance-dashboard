@@ -88,7 +88,7 @@ export function DataTable<TData, TValue>({
             disabled={disabled}
             size="sm"
             variant="outline"
-            className="ml-auto font-normal text-xs"
+            className="ml-auto text-xs font-normal"
             onClick={async () => {
               const ok = await confirm();
 
@@ -98,7 +98,7 @@ export function DataTable<TData, TValue>({
               }
             }}
           >
-            <Trash className="size-4 mr-2" />
+            <Trash className="mr-2 size-4" />
             Delete ({table.getFilteredSelectedRowModel().rows.length})
           </Button>
         )}

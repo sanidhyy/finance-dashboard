@@ -67,7 +67,7 @@ export const DateFilter = () => {
           disabled={false}
           size="sm"
           variant="outline"
-          className="lg:w-auto w-full h-9 rounded-md px-3 font-normal bg-white/10 hover:bg-white/30 hover:text-white border-none focus:ring-offset-0 focus:ring-transparent outline-none text-white focus:bg-white/30 transition"
+          className="h-9 w-full rounded-md border-none bg-white/10 px-3 font-normal text-white outline-none transition hover:bg-white/30 hover:text-white focus:bg-white/30 focus:ring-transparent focus:ring-offset-0 lg:w-auto"
         >
           <span>{formatDateRange(paramState)}</span>
 
@@ -75,7 +75,7 @@ export const DateFilter = () => {
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent className="lg:w-auto w-full p-0" align="start">
+      <PopoverContent className="w-full p-0 lg:w-auto" align="start">
         <Calendar
           disabled={false}
           initialFocus
@@ -86,7 +86,7 @@ export const DateFilter = () => {
           numberOfMonths={2}
         />
 
-        <div className="p-4 w-full flex items-center gap-x-2">
+        <div className="flex w-full items-center gap-x-2 p-4">
           <PopoverClose asChild>
             <Button
               onClick={onReset}

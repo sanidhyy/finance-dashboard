@@ -49,7 +49,7 @@ export const Actions = ({ id }: ActionsProps) => {
             disabled={deleteMutation.isPending}
             onClick={() => onOpen(id)}
           >
-            <Edit className="size-4 mr-2" />
+            <Edit className="mr-2 size-4" />
             Edit
           </DropdownMenuItem>
 
@@ -57,7 +57,7 @@ export const Actions = ({ id }: ActionsProps) => {
             disabled={deleteMutation.isPending}
             onClick={handleDelete}
           >
-            <Trash className="size-4 mr-2" />
+            <Trash className="mr-2 size-4" />
             Delete
           </DropdownMenuItem>
         </DropdownMenuContent>

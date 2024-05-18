@@ -14,7 +14,7 @@ export const AccountColumn = ({ account, accountId }: AccountColumnProps) => {
   return (
     <button
       onClick={onClick}
-      className="flex items-center cursor-pointer hover:underline"
+      className="flex cursor-pointer items-center hover:underline"
     >
       {account}
     </button>

@@ -27,7 +27,7 @@ export const CategoryColumn = ({
     <button
       onClick={onClick}
       className={cn(
-        "flex items-center cursor-pointer hover:underline",
+        "flex cursor-pointer items-center hover:underline",
         !category && "text-rose-500"
       )}
     >

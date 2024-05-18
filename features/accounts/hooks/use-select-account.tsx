@@ -15,7 +15,7 @@ import { useGetAccounts } from "@/features/accounts/api/use-get-accounts";
 
 export const useSelectAccount = (): [
   () => JSX.Element,
-  () => Promise<unknown>
+  () => Promise<unknown>,
 ] => {
   const accountQuery = useGetAccounts();
   const accountMutation = useCreateAccount();

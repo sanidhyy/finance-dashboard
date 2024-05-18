@@ -29,7 +29,7 @@ export const TableHeadSelect = ({
     >
       <SelectTrigger
         className={cn(
-          "focus:ring-offset-0 focus:ring-transparent outline-none border-none bg-transparent capitalize",
+          "border-none bg-transparent capitalize outline-none focus:ring-transparent focus:ring-offset-0",
           currentSelection && "text-blue-500"
         )}
       >

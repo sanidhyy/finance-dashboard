@@ -32,7 +32,7 @@ export const Select = ({
   return (
     <CreatableSelect
       placeholder={placeholder}
-      className="text-sm h-10"
+      className="h-10 text-sm"
       styles={{
         control: (base) => ({
           ...base,

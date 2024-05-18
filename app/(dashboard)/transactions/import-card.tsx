@@ -102,14 +102,14 @@ export const ImportCard = ({ data, onCancel, onSubmit }: ImportCardProps) => {
   };
 
   return (
-    <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-6">
+    <div className="mx-auto -mt-6 w-full max-w-screen-2xl pb-10">
       <Card className="border-none drop-shadow-sm">
         <CardHeader className="gap-y-2 lg:flex-row lg:items-center lg:justify-between">
-          <CardTitle className="text-xl line-clamp-1">
+          <CardTitle className="line-clamp-1 text-xl">
             Import Transaction
           </CardTitle>
 
-          <div className="flex flex-col lg:flex-row gap-y-2 items-center gap-x-2">
+          <div className="flex flex-col items-center gap-x-2 gap-y-2 lg:flex-row">
             <Button size="sm" onClick={onCancel} className="w-full lg:w-auto">
               Cancel
             </Button>

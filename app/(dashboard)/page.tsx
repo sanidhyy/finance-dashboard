@@ -3,7 +3,7 @@ import { DataGrid } from "@/components/data-grid";
 
 const DashboardPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-6">
+    <div className="mx-auto -mt-6 w-full max-w-screen-2xl pb-10">
       <DataGrid />
 
       <DataCharts />
