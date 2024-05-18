@@ -40,6 +40,7 @@
     "lucide-react": "^0.378.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
+    "query-string": "^9.0.0",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-currency-input-field": "^3.8.0",
