@@ -165,7 +165,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 In terminal, run `npm run db:generate` to generate database client and `npm run db:migrate` to make sure that your database is up-to-date along with schema.
 
-10. Run the Seed Script:
+11. Run the Seed Script:
 
 In the same terminal, run the following command to execute the seed script:
 
@@ -175,11 +175,11 @@ npm run db:seed
 
 This command uses `npm` to execute the Typescript file (`scripts/seed.ts`) and writes transaction data in database.
 
-13. Verify Data in Database:
+12. Verify Data in Database:
 
 Once the script completes, check your database to ensure that the transaction data has been successfully seeded.
 
-14. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
+13. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
 
 **NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
 
