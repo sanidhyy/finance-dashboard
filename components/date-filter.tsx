@@ -15,8 +15,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useGetSummary } from "@/features/summary/api/use-get-summary";
-import { cn, formatDateRange } from "@/lib/utils";
+import { formatDateRange } from "@/lib/utils";
 
 export const DateFilter = () => {
   const pathname = usePathname();
