@@ -154,9 +154,6 @@ const app = new Hono().get(
 
     const days = fillMissingDays(activeDays, startDate, endDate);
 
-    console.log({ startDate, endDate });
-    console.log({ lastPeriodStart, lastPeriodEnd });
-
     return ctx.json({
       data: {
         remainingAmount: currentPeriod.remaining,
