@@ -9,6 +9,7 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate:pg --schema db/schema.ts --out ./drizzle",
     "db:migrate": "bun ./scripts/migrate.ts",
+    "db:seed": "bun ./scripts/seed.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
