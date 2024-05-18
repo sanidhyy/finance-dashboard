@@ -147,7 +147,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
    2. **Procedure**:
       - Access your database provider's platform or configuration.
       - Locate the database connection details.
-      - Replace `<user>`, `<password>`, `<host>`, and `<port>` placeholders in the URI with your actual database credentials.
+      - Replace `<username>`, `<password>`, `<hostname>`, and `<database>` placeholders in the URI with your actual database credentials.
       - Ensure to include `?sslmode=require` at the end of the URI for SSL mode requirement.
 
 7. Specify Public App URL
