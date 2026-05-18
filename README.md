@@ -270,7 +270,7 @@ Useful resources and dependencies that are used in Finance.
 - [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports): ^3.2.0
 - [hono](https://www.npmjs.com/package/hono): ^4.11.9
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.564.0
-- [next](https://www.npmjs.com/package/next): 15.5.15
+- [next](https://www.npmjs.com/package/next): 15.5.18
 - [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
 - [pg](https://www.npmjs.com/package/pg): ^8.18.0
 - [postcss](https://www.npmjs.com/package/postcss): ^8
