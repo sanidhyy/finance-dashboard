@@ -120,7 +120,7 @@
     "react-select": "^5.10.2",
     "react-use": "^17.6.0",
     "recharts": "^2.15.4",
-    "sonner": "^1.7.4",
+    "sonner": "^2.0.8",
     "tailwind-merge": "^2.6.1",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.25.76",
