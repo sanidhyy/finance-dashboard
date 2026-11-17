@@ -113,7 +113,7 @@ finance-dashboard/
   |- .eslintrc.json
   |- .gitignore
   |- .prettierrc
-  |- bun.lockb
+  |- bun.lock
   |- components.json
   |- drizzle.config.ts
   |- environment.d.ts
