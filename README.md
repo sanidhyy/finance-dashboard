@@ -296,7 +296,7 @@ Useful resources and dependencies that are used in Finance.
 - [react-select](https://www.npmjs.com/package/react-select): ^5.10.2
 - [react-use](https://www.npmjs.com/package/react-use): ^17.6.0
 - [recharts](https://www.npmjs.com/package/recharts): ^2.15.4
-- [sonner](https://www.npmjs.com/package/sonner): ^1.7.4
+- [sonner](https://www.npmjs.com/package/sonner): ^2.0.8
 - [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.6.1
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.1
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
