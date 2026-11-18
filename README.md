@@ -290,7 +290,7 @@ Useful resources and dependencies that are used in Finance.
 - [react-currency-input-field](https://www.npmjs.com/package/react-currency-input-field): ^3.10.0
 - [react-day-picker](https://www.npmjs.com/package/react-day-picker): ^8.10.1
 - [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
-- [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.71.1
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.92.0
 - [react-icons](https://www.npmjs.com/package/react-icons): ^5.5.0
 - [react-papaparse](https://www.npmjs.com/package/react-papaparse): ^4.4.0
 - [react-select](https://www.npmjs.com/package/react-select): ^5.10.2
