@@ -247,7 +247,7 @@ Useful resources and dependencies that are used in Finance.
 - [@clerk/backend](https://www.npmjs.com/package/@clerk/backend): ^1.1.3
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^5.0.8
 - [@hono/clerk-auth](https://www.npmjs.com/package/@hono/clerk-auth): ^2.0.0
-- [@hono/zod-validator](https://www.npmjs.com/package/@hono/zod-validator): ^0.2.1
+- [@hono/zod-validator](https://www.npmjs.com/package/@hono/zod-validator): ^0.9.1
 - [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^3.10.0
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^0.9.5
 - [@paralleldrive/cuid2](https://www.npmjs.com/package/@paralleldrive/cuid2): ^2.3.1
